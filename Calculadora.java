@@ -66,4 +66,18 @@ public class Calculadora {
     public double getResultado() {
         return resultado;
     }
+
+    public int modulo() {
+        return num1 % num2;
+    }
+
+    // Asegúrate de que tu método realizarOperacion lo contemple:
+    public int realizarOperacion(String operacion) {
+        if (operacion.equalsIgnoreCase("suma")) return suma();
+        if (operacion.equalsIgnoreCase("resta")) return resta();
+        if (operacion.equalsIgnoreCase("multiplicar")) return multiplicar();
+        if (operacion.equalsIgnoreCase("dividir")) return dividir();
+        if (operacion.equalsIgnoreCase("modulo")) return modulo(); // <- LÍNEA NUEVA
+        return 0;
+    }
 }
